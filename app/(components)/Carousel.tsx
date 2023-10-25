@@ -2,6 +2,7 @@ import { useState } from "react";
 import Swipe from "react-easy-swipe";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import useSWR from "swr";
+import Image from "next/image";
 
 /**
  * Carousel component for nextJS and Tailwind.
@@ -63,13 +64,27 @@ export default function Carousel() {
             className="flex w-full h-[80vh] carousel-item relative ease-out duration-1000 2xl:h-[80vh] md:h-[70vh]"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
-            <img src={image.headerCover} className="w-full" />
+            {/* <img src={image.headerCover} className="w-full" /> */}
+            <Image
+              src={image.headerCover}
+              alt="Header Cover"
+              width={420}
+              height={500}
+              className="w-full select-none"
+            />
             <div className="absolute flex mb-4 w-full h-[80vh] overflow-hidden m-auto bg-headerCover 2xl:h-[80vh] md:h-[70vh]">
               <div className="flex w-1/2 ms-32">
-                <img
+                <Image
+                  src={image.addHeaderCover}
+                  alt="Additional Header Cover"
+                  width={600}
+                  height={500}
+                  className="flex-end select-none"
+                />
+                {/* <img
                   className="flex-end select-none"
                   src={image.addHeaderCover}
-                ></img>
+                ></img> */}
               </div>
               <div className="flex w-1/2 items-center justify-center">
                 <div className="">
@@ -100,7 +115,7 @@ export default function Carousel() {
         onClick={handleNextSlide}
         className="select-none absolute right-[10vw] m-auto text-6xl top-40 cursor-pointer text-white z-20 2xl:right-[10vh] md:right-[5vh]"
       />
-    </div>
+    </div >
 
     // <div className="relative">
     //   <AiOutlineLeft

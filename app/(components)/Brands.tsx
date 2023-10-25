@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Brands = () => {
   return (
@@ -8,22 +9,76 @@ const Brands = () => {
           Join these brands
         </h1>
         <p className="font-medium text-lg mt-3">
-          We've had the pleasure of working with industry-defining brands. These
+          We&apos;ve had the pleasure of working with industry-defining brands. These
           are just some of them.
         </p>
       </div>
       <div className="flex flex-row justify-center items-center w-9/12 mt-10 select-none">
-        <img className="mx-5" src="/images/spotify.png"></img>
-        <img className="mx-5" src="/images/google.png"></img>
-        <img className="mx-5" src="/images/stripe.png"></img>
-        <img className="mx-5" src="/images/youtube.png"></img>
-        <img className="mx-5" src="/images/microsoft.png"></img>
+        <Image
+          src="/images/spotify.png"
+          alt="Spotify"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
+        <Image
+          src="/images/google.png"
+          alt="Google"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
+        <Image
+          src="/images/stripe.png"
+          alt="Stripe"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
+        <Image
+          src="/images/youtube.png"
+          alt="Youtube"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
+        <Image
+          src="/images/microsoft.png"
+          alt="Microsoft"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
       </div>
       <div className="flex flex-row justify-center items-center w-9/12 mt-10 select-none">
-        <img className="mx-5" src="/images/medium.png"></img>
-        <img className="mx-5" src="/images/zoom.png"></img>
-        <img className="mx-5" src="/images/uber.png"></img>
-        <img className="mx-5" src="/images/grab.png"></img>
+        <Image
+          src="/images/medium.png"
+          alt="Medium"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
+        <Image
+          src="/images/zoom.png"
+          alt="Zoom"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
+        <Image
+          src="/images/uber.png"
+          alt="Uber"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
+        <Image
+          src="/images/grab.png"
+          alt="Grab"
+          width={150}
+          height={200}
+          className="mx-5"
+        />
       </div>
     </div>
   );

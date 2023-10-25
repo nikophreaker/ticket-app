@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type Props = {
   event: (e: any) => void;
@@ -11,10 +12,12 @@ const EventCard: React.FC<Props> = ({ event }) => {
         "max-w-lg rounded-2xl overflow-hidden shadow-lg m-5 bg-card hover:m-4"
       }
     >
-      <img
-        className="w-full"
+      <Image
         src="/images/eventCover.png"
-        alt="Sunset in the mountains"
+        alt="Event Cover"
+        width={350}
+        height={200}
+        className="w-full"
       />
       <div className="flex px-6 py-6">
         <div className="mt-2 me-5 text-center">

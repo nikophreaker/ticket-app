@@ -5,6 +5,7 @@ import SearchEvent from "./(components)/SearchEvent";
 import EventCard from "./(components)/EventCard";
 import { AiOutlineDown } from "react-icons/ai";
 import Brands from "./(components)/Brands";
+import Image from "next/image";
 import UpcomingEvent from "./(components)/UpcomingEvent";
 
 export default function Home() {
@@ -40,7 +41,13 @@ export default function Home() {
         </div>
       </div>
       <div className="flex w-full h-[13vw] bg-footer items-end">
-        <img className="ms-72" src="/images/newEvent.png"></img>
+        <Image
+          src="/images/newEvent.png"
+          alt="Event Picture"
+          width={420}
+          height={500}
+          className="ms-72"
+        />
         <div className="p-10 w-3/12">
           <h1 className="text-default-text font-semibold text-2xl">
             BUAT ACARA SENDIRI
