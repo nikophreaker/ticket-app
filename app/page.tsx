@@ -10,7 +10,7 @@ import UpcomingEvent from "./(components)/UpcomingEvent";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="w-full">
       <Carousel />
       <div className="flex justify-center -mt-36">
         <SearchEvent />

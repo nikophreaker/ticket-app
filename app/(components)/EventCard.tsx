@@ -5,7 +5,6 @@ type Props = {
   event: (e: any) => void;
 };
 const EventCard: React.FC<Props> = ({ event }) => {
-  console.log(event);
   return (
     <div
       className={

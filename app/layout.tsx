@@ -21,12 +21,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex flex-col h-screen max-h-screen bg-header text-default-text">
           <NavHeader />
-          <div className="flex-grow overflow-y-auto bg-page text-second-text">
+          <div className="flex-grow overflow-y-scroll bg-page text-second-text overflow-hidden">
             {children}
             <NavFooter />
           </div>
         </div>
       </body>
-    </html>
+    </html >
   );
 }

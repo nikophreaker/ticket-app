@@ -68,9 +68,9 @@ export default function Carousel() {
             <Image
               src={image.headerCover}
               alt="Header Cover"
-              width={420}
-              height={500}
+              fill
               className="w-full select-none"
+              priority
             />
             <div className="absolute flex mb-4 w-full h-[80vh] overflow-hidden m-auto bg-headerCover 2xl:h-[80vh] md:h-[70vh]">
               <div className="flex w-1/2 ms-32">
@@ -78,8 +78,10 @@ export default function Carousel() {
                   src={image.addHeaderCover}
                   alt="Additional Header Cover"
                   width={600}
-                  height={500}
+                  height={450}
                   className="flex-end select-none"
+                  priority
+                  style={{ width: "auto", height: "auto" }}
                 />
                 {/* <img
                   className="flex-end select-none"

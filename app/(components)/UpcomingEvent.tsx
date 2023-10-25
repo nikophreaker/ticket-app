@@ -31,7 +31,11 @@ const UpcomingEvent = () => {
   return (
     <div className="grid grid-cols-3 grid-rows-2">
       {data.map((data: any, index: any) => {
-        return <EventCard event={data} />;
+        if (index <= 5) {
+          return <EventCard key={index} event={data} />
+        } else {
+          return;
+        };
       })}
     </div>
   );

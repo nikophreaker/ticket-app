@@ -20,6 +20,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/images/google.png"
@@ -27,6 +29,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/images/stripe.png"
@@ -34,6 +38,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/images/youtube.png"
@@ -41,6 +47,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/images/microsoft.png"
@@ -48,6 +56,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
       <div className="flex flex-row justify-center items-center w-9/12 mt-10 select-none">
@@ -57,6 +67,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/images/zoom.png"
@@ -64,6 +76,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/images/uber.png"
@@ -71,6 +85,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
         <Image
           src="/images/grab.png"
@@ -78,6 +94,8 @@ const Brands = () => {
           width={150}
           height={200}
           className="mx-5"
+          priority
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
     </div>
