@@ -6,7 +6,7 @@ const fetcher = (url: any) => fetch(url).then((res) => res.json());
 const UpcomingEvent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { data, error, isLoading } = useSWR(
-    "http://localhost:3000/api/staticdata2",
+    process.env.BASE_URL + "api/staticdata2",
     fetcher,
     { refreshInterval: 3000 }
   );

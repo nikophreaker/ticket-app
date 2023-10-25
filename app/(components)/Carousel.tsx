@@ -16,7 +16,7 @@ const fetcher = (url: any) => fetch(url).then((res) => res.json());
 export default function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const { data, error, isLoading } = useSWR(
-    "http://localhost:3000/api/staticdata",
+    process.env.BASE_URL + "api/staticdata",
     fetcher,
     { refreshInterval: 3000 }
   );
