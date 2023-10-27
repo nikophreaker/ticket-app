@@ -18,7 +18,8 @@
     "eventVenueMap": "/images/eventVanueMap.png",
     "isMatch": true,
     "homeImage": "/images/homeImage.png",
-    "awayImage": "/images/awayImage.png"
+    "awayImage": "/images/awayImage.png",
+    "slug": "pekan5-bri-liga-1-bali-united-vs-madura-united"
   },
   {
     "id": 2,
@@ -39,7 +40,8 @@
     "eventVenueMap": "/images/eventVanueMap.png",
     "isMatch": true,
     "homeImage": "/images/homeImage.png",
-    "awayImage": "/images/awayImage.png"
+    "awayImage": "/images/awayImage.png",
+    "slug": "pekan5-bri-liga-1-bali-united-vs-madura-united"
   },
   {
     "id": 3,
@@ -60,7 +62,8 @@
     "eventVenueMap": "/images/eventVanueMap.png",
     "isMatch": true,
     "homeImage": "/images/homeImage.png",
-    "awayImage": "/images/awayImage.png"
+    "awayImage": "/images/awayImage.png",
+    "slug": "pekan5-bri-liga-1-bali-united-vs-madura-united"
   },
   {
     "id": 4,
@@ -81,7 +84,8 @@
     "eventVenueMap": "/images/eventVanueMap.png",
     "isMatch": true,
     "homeImage": "/images/homeImage.png",
-    "awayImage": "/images/awayImage.png"
+    "awayImage": "/images/awayImage.png",
+    "slug": "pekan5-bri-liga-1-bali-united-vs-madura-united"
   },
   {
     "id": 5,
@@ -102,6 +106,7 @@
     "eventVenueMap": "/images/eventVanueMap.png",
     "isMatch": true,
     "homeImage": "/images/homeImage.png",
-    "awayImage": "/images/awayImage.png"
+    "awayImage": "/images/awayImage.png",
+    "slug": "pekan5-bri-liga-1-bali-united-vs-madura-united"
   }
 ]

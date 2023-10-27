@@ -6,13 +6,14 @@ type Props = {
   event: (e: any) => void;
 };
 const EventCard: React.FC<Props> = ({ event }) => {
+  const eventData = event as any
   return (
     <div
       className={
         "max-w-lg rounded-2xl overflow-hidden shadow-lg m-5 bg-card hover:m-4"
       }
     >
-      <Link href={"/event/abouts"}>
+      <Link href={`/event/${eventData.slug}`}>
         <Image
           src="/images/eventCover.png"
           alt="Event Cover"

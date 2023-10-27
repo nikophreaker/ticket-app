@@ -5,15 +5,16 @@ import Carousel from '@/app/(components)/Carousel'
 import EventInfoHeader from '@/app/(components)/EventInfoHeader'
 import SearchEvent from '@/app/(components)/SearchEvent'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import useSWR from 'swr'
 
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 const Page = () => {
     const { data, error, isLoading } = useSWR(
-        "api/staticdata",
+        `${process.env.NEXT_PUBLIC_BASE_URL}api/staticdata`,
         fetcher,
-        { refreshInterval: 3000 }
+        { refreshInterval: 10000 }
     );
 
     if (error)
@@ -35,7 +36,7 @@ const Page = () => {
     return (
         <main className="w-full">
             <div
-                className="flex w-full h-[80vh] carousel-item relative ease-out duration-1000 2xl:h-[80vh] xl:h-[70vh]"
+                className="flex items-center w-full h-[35vw] carousel-item relative ease-out duration-500 2xl:h-[35vw] xl:h-[35vw] lg:h-[35vw] md:h-[40vw] sm:h-[40vw] xs:h-[40vw]"
             >
                 <Image
                     src={data[0].headerCover}
@@ -44,53 +45,59 @@ const Page = () => {
                     className="w-full select-none"
                     priority
                 />
-                <div className="absolute flex justify-center items-center mb-4 w-full h-[80vh] overflow-hidden m-auto 2xl:h-[80vh] xl:h-[70vh]">
-                    <h1 className="italic text-default-text text-6xl font-bold 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl">
+                <div className="absolute text-center w-full overflow-hidden m-auto">
+                    <h1 className="italic text-default-text text-6xl font-bold 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl">
                         {data[0].eventName}
                     </h1>
                 </div>
             </div>
-            <div className="flex justify-center -mt-36 2xl:-mt-28 xl:-mt-28 lg:-mt-24 md:-mt-20">
+            <div className="flex justify-center -mt-20 2xl:-mt-20 xl:-mt-20 lg:-mt-24 md:-mt-20 sm:-mt-14 xs:-mt-10">
                 <EventInfoHeader eventInfo={data[0]} />
             </div>
             <div className="mt-28 m-36 2xl:m-56 xl:m-36 lg:m-24 md:m-20 sm:m-16 xs:m-14">
-                <div className="flex justify-end mb-10">
-
+                <div className="bg-pink-600 text-pink-600 w-[15vw] rounded-tr-full select-none">
+                    .
                 </div>
-                <div className="border-b-2 border-black mb-5">
-
+                <div className="font-bold italic text-4xl mt-5 mb-7">
+                    Deskripsi Event
                 </div>
-                <div>
+                <div className="font-normal text-xl mb-7 text-justify">
+                    {data[0].descriptionEvent}
+                </div>
+                <div className="bg-pink-500 text-pink-500 w-[15vw] rounded-tr-full select-none">
+                    .
+                </div>
+                <div className="font-bold italic text-4xl mt-5 mb-7">
+                    Stadium Map
+                </div>
+                <div className="font-normal text-xl mb-36">
+                    <Image
+                        src={data[0].eventVenueMap}
+                        alt="image"
+                        width={0}
+                        height={0}
+                        sizes="1000vw"
+                        style={{ height: "auto", width: "auto" }}
+                    />
+                </div>
+                <div className="font-normal text-xl mb-10">
+                    <Image
+                        src={data[0].eventMapAddress}
+                        alt="image"
+                        width={0}
+                        height={0}
+                        sizes="1000vw"
+                        style={{ height: "auto", width: "auto" }}
+                    />
                 </div>
                 <div className="w-full flex justify-center mt-20">
-                    <button className="flex rounded-full text-pink-600 py-4 px-7 outline-2 outline hover:text-pink-700 items-center">
-                        <h2 className="text-lg font-medium 2xl:text-lg xl:text-lg lg:text-lg md:text-sm sm:text-xs xs:text-xs">Load More</h2>
-                    </button>
+                    <Link href={`${data[0].slug}/chooseticket`}>
+                        <button className="flex rounded-2xl text-white py-4 px-7 bg-pink-600 hover:bg-pink-700 items-center">
+                            <h2 className="text-xl font-medium italic px-5 2xl:text-xl xl:text-xl lg:text-lg md:text-sm sm:text-xs xs:text-xs">PILIH TIKET</h2>
+                        </button>
+                    </Link>
                 </div>
             </div>
-            <div className="flex w-full h-[13vw] bg-footer items-end 2xl:h-[16vw] xl:h-[15vw] md:h-[18vw] justify-center">
-                <Image
-                    src="/images/newEvent.png"
-                    alt="Event Picture"
-                    width={420}
-                    height={500}
-                    priority
-                    className="w-[35vw]"
-                // style={{ width: "auto", height: "auto" }}
-                />
-                <div className="p-10 w-3/12 2xl:p-10 xl:p-10 lg:p-6 md:p-4">
-                    <h1 className="text-default-text font-semibold text-2xl 2xl:text-lg xl:text-lg lg:text-lg md:text-xs sm:text-xs xs:text-xs">
-                        BUAT ACARA SENDIRI
-                    </h1>
-                    <p className="text-default-text font-medium text-lg mt-3 2xl:text-lg xl:text-sm lg:text-sm md:text-xs sm:text-xs xs:text-xs">
-                        Loerm ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                    <button className="rounded-full text-default-text bg-pink-600 py-3 px-16 hover:bg-pink-700 mt-6 2xl:px-16 xl:px-14 lg:px-6 md:px-4">
-                        <h2 className="text-lg font-medium 2xl:text-lg xl:text-lg lg:text-sm md:text-xs sm:text-xs xs:text-xs">Create To Email</h2>
-                    </button>
-                </div>
-            </div>
-            <Brands />
             <div className=""></div>
         </main>
     )
