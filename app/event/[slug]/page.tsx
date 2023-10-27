@@ -9,7 +9,7 @@ import React from 'react'
 import useSWR from 'swr'
 
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
-const page = () => {
+const Page = () => {
     const { data, error, isLoading } = useSWR(
         "http://localhost:3000/api/staticdata",
         fetcher,
@@ -96,4 +96,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
