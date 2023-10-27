@@ -142,7 +142,7 @@ const Page = () => {
                         </div>
                     </div>
                     <div className='flex justify-center'>
-                        <input type="checkbox" checked="checked" className="checkbox checkbox-secondary" />
+                        <input type="checkbox" checked={false} className="checkbox checkbox-secondary" />
                         <span className='italic'>Data yang saya masukkan sudah benar dan bisa dipertanggung jawabkan</span>
                     </div>
                     <div className="w-full flex justify-center mt-10">
