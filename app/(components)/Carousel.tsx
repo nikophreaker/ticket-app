@@ -53,17 +53,17 @@ export default function Carousel() {
 
   return (
     <div className="carousel w-full relative">
-      <AiOutlineLeft
-        onClick={handlePrevSlide}
-        className="select-none absolute left-[10vw] m-auto text-6xl top-40 cursor-pointer text-white z-20 2xl:left-[10vh] md:left-[5vh]"
-      />
       {data.map((image: any, index: any) => {
         return (
           <div
             key={image.id}
-            className="flex w-full h-[80vh] carousel-item relative ease-out duration-1000 2xl:h-[80vh] md:h-[70vh]"
+            className="flex w-full h-[80vh] carousel-item relative ease-out duration-1000 2xl:h-[80vh] xl:h-[70vh]"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
+            <AiOutlineLeft
+              onClick={handlePrevSlide}
+              className="select-none absolute left-[10vw] m-auto text-6xl top-40 cursor-pointer text-white z-20 2xl:left-[10vh] xl:left-[5vh] lg:left-[2vh] md:left-[2vh]"
+            />
             {/* <img src={image.headerCover} className="w-full" /> */}
             <Image
               src={image.headerCover}
@@ -72,7 +72,7 @@ export default function Carousel() {
               className="w-full select-none"
               priority
             />
-            <div className="absolute flex mb-4 w-full h-[80vh] overflow-hidden m-auto bg-headerCover 2xl:h-[80vh] md:h-[70vh]">
+            <div className="absolute flex mb-4 w-full h-[80vh] overflow-hidden m-auto bg-headerCover 2xl:h-[80vh] xl:h-[70vh]">
               <div className="flex w-1/2 ms-32">
                 <Image
                   src={image.addHeaderCover}
@@ -90,33 +90,33 @@ export default function Carousel() {
               </div>
               <div className="flex w-1/2 items-center justify-center">
                 <div className="">
-                  <h1 className="italic text-default-text text-6xl font-bold 2xl:text-6xl md:text-5xl">
+                  <h1 className="italic text-default-text text-6xl font-bold 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-4xl">
                     {image.title}
                   </h1>
-                  <h5 className="italic text-pink-600 text-4xl font-bold 2xl:text-4xl md:text-3xl">
+                  <h5 className="italic text-pink-600 text-4xl font-bold 2xl:text-4xl xl:text-2xl lg:text-xl md:text-xl">
                     {image.subtitle}
                   </h5>
-                  <p className="mt-10 text-default-text text-lg font-light me-60 2xl:mt-10 2xl:text-lg md:mt-8 md:text-sm">
+                  <p className="mt-10 text-default-text text-lg font-light me-60 2xl:mt-10 2xl:text-lg xl:mt-5 xl:text-sm lg:text-sm lg:me-30 md:text-sm md:me-20">
                     {image.descriptionHeader}
                   </p>
-                  <div className="mt-8 mb-16 select-none">
-                    <button className="rounded-full text-default-text bg-pink-600 py-6 px-16 hover:bg-pink-700 me-5">
-                      <h2 className="text-lg font-medium">Get Ticket</h2>
+                  <div className="mt-8 mb-16 select-none 2xl:mt-8 xl:mt-5">
+                    <button className="rounded-full text-default-text bg-pink-600 py-6 px-16 hover:bg-pink-700 me-5 2xl:py-6 2xl:px-16 xl:py-4 xl:px-10 lg:py-4 lg:px-8 md:py-4 md:px-4">
+                      <h2 className="text-lg font-medium md:text-sm">Get Ticket</h2>
                     </button>
-                    <button className="rounded-full text-default-text py-5 px-16 outline outline-2 hover:outline-4">
-                      <h2 className="text-lg font-medium">Learn More</h2>
+                    <button className="rounded-full text-default-text py-5 px-16 outline outline-2 hover:outline-4 2xl:py-5 2xl:px-16 xl:py-3 xl:px-10 lg:py-4 lg:px-8 md:py-4 md:px-4">
+                      <h2 className="text-lg font-medium md:text-sm">Learn More</h2>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
+            <AiOutlineRight
+              onClick={handleNextSlide}
+              className="select-none absolute right-[10vw] m-auto text-6xl top-40 cursor-pointer text-white z-20 2xl:right-[10vh] xl:right-[5vh] lg:right-[2vh]  md:right-[2vh]"
+            />
           </div>
         );
       })}
-      <AiOutlineRight
-        onClick={handleNextSlide}
-        className="select-none absolute right-[10vw] m-auto text-6xl top-40 cursor-pointer text-white z-20 2xl:right-[10vh] md:right-[5vh]"
-      />
     </div >
 
     // <div className="relative">

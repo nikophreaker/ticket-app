@@ -12,51 +12,59 @@ export default function Home() {
   return (
     <main className="w-full">
       <Carousel />
-      <div className="flex justify-center -mt-36">
+      <div className="flex justify-center -mt-36 2xl:-mt-28 xl:-mt-28 lg:-mt-24 md:-mt-20">
         <SearchEvent />
       </div>
-      <div className="mt-28 m-56">
-        <div className="flex justify-end">
-          <button className="flex justify-between rounded-full text-default-text bg-pink-600 py-4 px-7 hover:bg-pink-700 items-center me-5">
-            <h2 className="text-lg font-medium me-5">Weekdays</h2>
+      <div className="mt-28 m-36 2xl:m-56 xl:m-36 lg:m-24 md:m-20 sm:m-16 xs:m-14">
+        <div className="flex justify-end mb-10">
+          <button className="flex justify-between rounded-full text-default-text bg-pink-600 py-4 px-7 hover:bg-pink-700 items-center me-5
+          2xl:py-4 2xl:px-7 xl:py-3 xl:px-6 lg:py-2 lg:px-5 md:py-2 md:px-4 sm:py-2 sm:px-4">
+            <h2 className="text-lg font-medium me-5 2xl:text-lg xl:text-lg lg:text-sm md:text-sm sm:text-xs xs:text-xs">Weekdays</h2>
             <AiOutlineDown className="select-none m-auto text-xl cursor-pointer text-white" />
           </button>
           <button className="flex justify-between rounded-full text-default-text bg-pink-600 py-4 px-7 hover:bg-pink-700 items-center me-5">
-            <h2 className="text-lg font-medium me-5">Event Type</h2>
+            <h2 className="text-lg font-medium me-5 2xl:text-lg xl:text-lg lg:text-sm md:text-sm sm:text-xs xs:text-xs">Event Type</h2>
             <AiOutlineDown className="select-none m-auto text-xl cursor-pointer text-white" />
           </button>
           <button className="flex justify-between rounded-full text-default-text bg-pink-600 py-4 px-7 hover:bg-pink-700 items-center">
-            <h2 className="text-lg font-medium me-5">Any Category</h2>
+            <h2 className="text-lg font-medium me-5 2xl:text-lg xl:text-lg lg:text-sm md:text-sm sm:text-xs xs:text-xs">Any Category</h2>
             <AiOutlineDown className="select-none m-auto text-xl cursor-pointer text-white" />
           </button>
         </div>
         <div className="border-b-2 border-black mb-5">
-          <h1 className="text-5xl italic font-bold">UPComing</h1>
+          <h1 className="text-5xl italic font-bold lg:text-4xl sm:text-3xl">UPComing</h1>
           <UpcomingEvent />
           <div className="mt-12"></div>
         </div>
         <div>
-          <h1 className="text-5xl italic font-bold">Sports</h1>
+          <h1 className="text-5xl italic font-bold lg:text-4xl sm:text-3xl">Sports</h1>
           <UpcomingEvent />
         </div>
+        <div className="w-full flex justify-center mt-20">
+          <button className="flex rounded-full text-pink-600 py-4 px-7 outline-2 outline hover:text-pink-700 items-center">
+            <h2 className="text-lg font-medium 2xl:text-lg xl:text-lg lg:text-lg md:text-sm sm:text-xs xs:text-xs">Load More</h2>
+          </button>
+        </div>
       </div>
-      <div className="flex w-full h-[13vw] bg-footer items-end">
+      <div className="flex w-full h-[13vw] bg-footer items-end 2xl:h-[16vw] xl:h-[15vw] md:h-[18vw] justify-center">
         <Image
           src="/images/newEvent.png"
           alt="Event Picture"
           width={420}
           height={500}
-          className="ms-72"
+          priority
+          className="w-[35vw]"
+        // style={{ width: "auto", height: "auto" }}
         />
-        <div className="p-10 w-3/12">
-          <h1 className="text-default-text font-semibold text-2xl">
+        <div className="p-10 w-3/12 2xl:p-10 xl:p-10 lg:p-6 md:p-4">
+          <h1 className="text-default-text font-semibold text-2xl 2xl:text-lg xl:text-lg lg:text-lg md:text-xs sm:text-xs xs:text-xs">
             BUAT ACARA SENDIRI
           </h1>
-          <p className="text-default-text font-medium text-lg mt-3">
+          <p className="text-default-text font-medium text-lg mt-3 2xl:text-lg xl:text-sm lg:text-sm md:text-xs sm:text-xs xs:text-xs">
             Loerm ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <button className="rounded-full text-default-text bg-pink-600 py-3 px-16 hover:bg-pink-700 mt-6">
-            <h2 className="text-lg font-medium">Create To Email</h2>
+          <button className="rounded-full text-default-text bg-pink-600 py-3 px-16 hover:bg-pink-700 mt-6 2xl:px-16 xl:px-14 lg:px-6 md:px-4">
+            <h2 className="text-lg font-medium 2xl:text-lg xl:text-lg lg:text-sm md:text-xs sm:text-xs xs:text-xs">Create To Email</h2>
           </button>
         </div>
       </div>
