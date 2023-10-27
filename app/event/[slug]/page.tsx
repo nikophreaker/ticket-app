@@ -11,7 +11,7 @@ import useSWR from 'swr'
 const fetcher = (url: any) => fetch(url).then((res) => res.json());
 const Page = () => {
     const { data, error, isLoading } = useSWR(
-        "http://localhost:3000/api/staticdata",
+        "api/staticdata",
         fetcher,
         { refreshInterval: 3000 }
     );
