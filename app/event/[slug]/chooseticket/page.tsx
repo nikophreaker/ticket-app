@@ -5,6 +5,7 @@ import Carousel from '@/app/(components)/Carousel'
 import EventInfoHeader from '@/app/(components)/EventInfoHeader'
 import SearchEvent from '@/app/(components)/SearchEvent'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 import useSWR from 'swr'
 
@@ -34,7 +35,7 @@ const Page = () => {
 
     return (
         <main className="w-full">
-            <div className="mt-28 m-36 2xl:m-56 xl:m-36 lg:m-24 md:m-20 sm:m-16 xs:m-14">
+            <div className="m-36 2xl:m-36 xl:m-36 lg:m-24 md:m-20 sm:m-16 xs:m-14">
                 <div className='flex justify-center mb-5'>
                     <ul className="steps">
                         <li className="step step-secondary">Pilih tiket</li>
@@ -149,9 +150,11 @@ const Page = () => {
                         <button className="flex rounded-2xl text-pink-600 py-4 px-7 me-5 outline outline-pink-600 hover:text-white hover:bg-pink-600 items-center">
                             <h2 className="text-xl font-medium italic px-5 2xl:text-xl xl:text-xl lg:text-lg md:text-sm sm:text-xs xs:text-xs">BATAL</h2>
                         </button>
-                        <button className="flex rounded-2xl text-white py-4 px-7 bg-pink-600 hover:bg-pink-700 items-center">
-                            <h2 className="text-xl font-medium italic px-5 2xl:text-xl xl:text-xl lg:text-lg md:text-sm sm:text-xs xs:text-xs">BUAT PESANAN</h2>
-                        </button>
+                        <Link href={`/event/${data[0].slug}/ticketpayment`}>
+                            <button className="flex rounded-2xl text-white py-4 px-7 bg-pink-600 hover:bg-pink-700 items-center">
+                                <h2 className="text-xl font-medium italic px-5 2xl:text-xl xl:text-xl lg:text-lg md:text-sm sm:text-xs xs:text-xs">BUAT PESANAN</h2>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
