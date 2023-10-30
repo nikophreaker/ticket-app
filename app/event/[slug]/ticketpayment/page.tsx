@@ -74,32 +74,19 @@ const Page = () => {
                         </div>
                     </div>
                     <div className='rounded-xl p-6 shadow-lg'>
-                        <span className='text-blue-600 text-xl'>Lihat Detail Pesanan &gt;</span>
-                        <div className="font-normal text-xl mb-10 grid grid-cols-2">
-                            <div className='text-start'>
-                                <div className='flex p-4 mb-4 bg-blue-200 rounded-full items-center'>
-                                    <input type="radio" name="radio-1" className="radio radio-secondary me-5 bg-white w-10 h-10" checked />
-                                    <span className='text-xl'>BANK TRANSFER</span>
-                                </div>
-                                <div className='flex p-4 mb-4 bg-blue-200 rounded-full items-center'>
-                                    <input type="radio" name="radio-1" className="radio radio-secondary me-5 bg-white w-10 h-10" />
-                                    <span className='text-xl'>BANK TRANSFER</span>
-                                </div>
-                                <div className='flex p-4 mb-4 bg-blue-200 rounded-full items-center'>
-                                    <input type="radio" name="radio-1" className="radio radio-secondary me-5 bg-white w-10 h-10" />
-                                    <span className='text-xl'>BANK TRANSFER</span>
-                                </div>
-                                <div className='flex p-4 mb-4 bg-blue-200 rounded-full items-center'>
-                                    <input type="radio" name="radio-1" className="radio radio-secondary me-5 bg-white w-10 h-10" />
-                                    <span className='text-xl'>OVO</span>
-                                </div>
-                            </div>
-                        </div>
+                        <div className='bg-blue-200 h-28 rounded-xl mb-1'></div>
+                        <span className='text-blue-600 text-sm flex justify-end mb-1'>Lihat Detail Pesanan &gt;</span>
+                        <div className='border-b-2 border-b-black border-dashed mb-7'></div>
+                        <span className='text-xl flex'>Masukkan Kode Voucher</span>
+                        <input type="text" placeholder="" className="input input-bordered w-full max-w-xs bg-white border-blue-200 mb-3" />
+                        <span className='text-xl flex italic'>Masukkan Poin</span>
+                        <input type="text" placeholder="" className="input input-bordered w-full max-w-xs bg-white border-blue-200" />
+                        <button className="btn btn-primary bg-blue-500 border-transparent w-full text-xl font-normal mt-3 rounded-2xl">BAYAR</button>
                     </div>
                 </div>
             </div>
             <div className=""></div>
-        </main>
+        </main >
     )
 }
 

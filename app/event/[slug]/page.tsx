@@ -70,7 +70,7 @@ const Page = () => {
                 <div className="font-bold italic text-4xl mt-5 mb-7">
                     Stadium Map
                 </div>
-                <div className="font-normal text-xl mb-36">
+                <div className="font-normal text-xl mb-16">
                     <Image
                         src={data[0].eventVenueMap}
                         alt="image"
@@ -80,15 +80,16 @@ const Page = () => {
                         style={{ height: "auto", width: "auto" }}
                     />
                 </div>
-                <div className="font-normal text-xl mb-10">
-                    <Image
-                        src={data[0].eventMapAddress}
-                        alt="image"
-                        width={0}
-                        height={0}
-                        sizes="1000vw"
-                        style={{ height: "auto", width: "auto" }}
-                    />
+                <div>
+                    <div className="row">
+                        <div className="col-sm-12">
+                            <div className="card">
+                                <div className="card-body">
+                                    <iframe className="w-100" src={data[0].eventMapAddress} height="500" allowFullScreen={true}></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="w-full flex justify-center mt-20">
                     <Link href={`${data[0].slug}/chooseticket`}>
@@ -99,7 +100,7 @@ const Page = () => {
                 </div>
             </div>
             <div className=""></div>
-        </main>
+        </main >
     )
 }
 
