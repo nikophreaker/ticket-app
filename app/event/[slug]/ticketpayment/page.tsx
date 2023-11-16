@@ -68,7 +68,7 @@ const Page = () => {
                                 </div>
                                 <div className='flex p-4 mb-4 bg-blue-200 rounded-full items-center'>
                                     <input type="radio" name="radio-1" className="radio radio-secondary me-5 bg-white w-10 h-10" />
-                                    <span className='text-xl'>OVO</span>
+                                    <span className='text-xl'>OVO's</span>
                                 </div>
                             </div>
                         </div>
