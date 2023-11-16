@@ -75,7 +75,7 @@ const Page = () => {
                     </div>
                     <div className='rounded-xl p-6 shadow-lg'>
                         <div className='bg-blue-200 h-28 rounded-xl mb-1'></div>
-                        <span className='text-blue-600 text-sm flex justify-end mb-1'>Lihat Detail Pesanan &gt;</span>
+                        <span className='text-blue-600 text-sm flex justify-end mb-1'>Lihat Details Pesanan &gt;</span>
                         <div className='border-b-2 border-b-black border-dashed mb-7'></div>
                         <span className='text-xl flex'>Masukkan Kode Voucher</span>
                         <input type="text" placeholder="" className="input input-bordered w-full max-w-xs bg-white border-blue-200 mb-3" />
